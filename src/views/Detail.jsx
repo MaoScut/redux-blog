@@ -29,7 +29,7 @@ let HDetail=connect(mapState,mapDispatch)(Detail);
 const DetailContainer = function({match}){
 	return(
 	<div>
-		<Route path={`${match.url}/:articleId`} component={HDetail}></Route>
+		<Route path={`${match.url}`} component={HDetail}></Route>
 	</div>
 		)
 }
