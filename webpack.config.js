@@ -19,6 +19,8 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    context: resolve(__dirname, 'src'),
+    
     entry: [
         'react-hot-loader/patch',
         // activate HMR for React
@@ -32,7 +34,7 @@ module.exports = {
         // only- means to only hot reload for successful updates
 
 
-        './index.js'
+        './index.jsx'
         // the entry point of our app
     ],
     resolve: {
@@ -48,7 +50,6 @@ module.exports = {
             // necessary for HMR to know where to load the hot update chunks
     },
 
-    context: resolve(__dirname, 'src'),
 
     devtool: 'inline-source-map',
 

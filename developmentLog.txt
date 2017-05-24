@@ -12,3 +12,7 @@ so let's start
 19:33 delete all thing unrelative
 
 finish component fetch data from store, but when change something in Home.jsx, the app doesn't update?
+
+oh on, i am trapped into react hmr once again, although i have solved it, i didn't find all the reason, one of them is that i should not use variable in hot.accapt(), directly use string.
+
+finish click title=>change url which contains article id=>show detail component!

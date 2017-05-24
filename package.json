@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/webpack",
-    "start": "./node_modules/.bin/webpack-dev-server --hot --inline --content-base ."
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

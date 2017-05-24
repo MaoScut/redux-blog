@@ -7,7 +7,7 @@ import Detail from '../views/Detail';
 const routes=()=>(
 	<BrowserRouter>
 		<div>
-			<Route path="/detail" component={Detail} />	
+			<Route path="/detail" component={Detail} />
 			<Route exact path="/" component={Home} />	
 
 		</div>

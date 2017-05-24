@@ -18,6 +18,7 @@ import RootApp from './routes';
 import { Provider } from 'react-redux';
 import store from './store';
 import { AppContainer } from 'react-hot-loader';
+import Detail from './views/Detail';
 
 const render = (Component) => {
   ReactDOM.render(<AppContainer>
@@ -28,16 +29,20 @@ const render = (Component) => {
     document.getElementById('root')
   );
 };
+// const render = (Component) => {
+//   ReactDOM.render(<AppContainer>
+//       <Component />
+//   </AppContainer>,
+//     document.getElementById('root')
+//   );
+// };
 
 render(RootApp);
 
 
 // Hot Module Replacement API
-const c = './routes';
 if (module.hot) {
-  module.hot.accept(c, () => {
-    render(RootApp);
-  });
+  module.hot.accept('./routes', () => { render(RootApp) })
 }
 
 
