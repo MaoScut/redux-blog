@@ -1,0 +1,14 @@
+没有indexRoute？
+
+what do you want to achieve in this project?
+Home page:
+	list all article title as links and its brief content
+Detail page:
+	show content for a certain article
+	this page's url should include article id
+first finish basic function, and than polish your singe page application.
+
+so let's start
+19:33 delete all thing unrelative
+
+finish component fetch data from store, but when change something in Home.jsx, the app doesn't update?
