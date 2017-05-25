@@ -18,7 +18,6 @@ import RootApp from './routes';
 import { Provider } from 'react-redux';
 import store from './store';
 import { AppContainer } from 'react-hot-loader';
-import Detail from './views/Detail';
 
 const render = (Component) => {
   ReactDOM.render(<AppContainer>

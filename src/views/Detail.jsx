@@ -2,52 +2,25 @@ import React, {Component} from 'react';
 import { Route } from 'react-router-dom';
 import {select} from '../actions';
 import { connect} from 'react-redux';
+//withRouter maybe used when the component is not render by a link
+import { withRouter } from 'react-router';
 
-class Detail extends Component {
-	render(){
-		let title=this.props.title||'no';
-		let content= this.props.content||'no';
-		return (
-			<div>
-			<h1>{title}</h1>
-			<h2>{content}</h2>
-			</div>
-			);
-	}
-}
-let HDetail=connect(mapState,mapDispatch)(Detail);
-// const Detail = ({match})=>(
-// 	<div>
-// 		<h2>{match.params.articleId}</h2>
-// 	</div>
-// 	)
-// const DetailContainer = ({match})=>(
-// 	<div>
-// 		<Route path={`${match.url}/:articleId`} component={Detail}></Route>
-// 	</div>
-// 	)
-const DetailContainer = function({match}){
+const Detail = function({match,title, content}){
 	return(
 	<div>
-		<Route path={`${match.url}`} component={HDetail}></Route>
+		<h2>{title}</h2>
+		<h3>{content}</h3>
 	</div>
 		)
 }
-function mapState(state){
-	let id=state.selectedId;
+function mapState(state, ownProps){
+	let id= ownProps.match.params.articleId;
 	return {
 		title: state.data[id-1].title,
 		content: state.data[id-1].content
+		//use this api to change url directly
+		//push: ownProps.history.push 
 	}
 }
 
-function mapDispatch(dispatch){
-	return {
-		load(){
-			alert("!!!")
-		}
-	}
-}
-
-
-export default DetailContainer;
+export default connect(mapState)(Detail);

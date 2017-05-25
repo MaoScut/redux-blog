@@ -2,7 +2,6 @@ import * as ActionTypes from '../actions';
 import articles from '../../api/articles.json';
 
 const initialState = {
-  selectedId: null,
   data: []
 };
 

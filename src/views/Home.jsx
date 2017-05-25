@@ -7,7 +7,7 @@ class Home extends Component {
 
 	render(){	
 		var content='loading';
-		if(this.props.data.length>0) content=this.props.data.map(v=>(<div key={v.id}><Link onClick={()=>this.props.change(v.id)} to={`/detail/${v.id}`} >{v.title}</Link></div>));
+		if(this.props.data.length>0) content=this.props.data.map(v=>(<div key={v.id}><Link to={`/detail/${v.id}`} >{v.title}</Link></div>));
 		return (
 			<div>
 			<h1>Home</h1>
