@@ -27,12 +27,15 @@ function updateSavedEntry(id){
 
 export function saveEntry(item){
 	const {title, id, content} = item;
-	if(id){
+	return dispatch=>{
+		if(id){
 
-	} else {
-		storage.insertEntry(title, content);
-		// .then(inserted=> dispatch(updateSavedEntry(inserted.id)))
-		// .then()
+		} else {
+			storage.insertEntry(title, content)
+			  .then(inserted=> dispatch(updateSavedEntry(inserted.id)))
+			  .then(()=>storage.getAll())
+			  .then(items=>dispatch(updataEntryList(items)));
+		}
 	}
 }
 
