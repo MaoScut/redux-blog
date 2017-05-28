@@ -9,7 +9,6 @@ const routes=()=>(
 		<div>
 			<Route path="/detail/:articleId" component={Detail} />
 			<Route exact path="/" component={Home} />	
-
 		</div>
 	</BrowserRouter>
 	);
