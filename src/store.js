@@ -58,6 +58,5 @@ export function insertEntry(title, content){
 	.then(()=>entry);
 }
 
-debugger;
 const store = applyMiddleware(thunkMiddleware)(createStore)(reducer);
 export default store;
