@@ -22,6 +22,7 @@ const STORAGE_KEY = 'redux-blog';
 export function getAll() {
   return new Promise((resolve) => {
     const results = STORAGE.getItem(STORAGE_KEY);
+    debugger;
     try {
       resolve(
         results

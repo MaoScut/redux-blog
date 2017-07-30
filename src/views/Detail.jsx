@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 //import {select} from '../actions';
 import { connect} from 'react-redux';
 //withRouter maybe used when the component is not render by a link
 import { withRouter } from 'react-router';
 
-const Detail = function({match,title, content}){
+const Detail = function({ match, title, content }){
 	return(
 	<div>
 		<h2>{title}</h2>
